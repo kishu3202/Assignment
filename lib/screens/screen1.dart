@@ -39,7 +39,7 @@ class _Screen1State extends State<Screen1> {
               radius: 50.0,
               backgroundImage: _image != null ? FileImage(_image!) : null,
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 30.0),
             ElevatedButton(
               onPressed: getImage,
               child: Text('Select Image'),
@@ -48,10 +48,13 @@ class _Screen1State extends State<Screen1> {
             TextField(
               controller: _nameController,
               decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 labelText: 'Name',
               ),
             ),
-            SizedBox(height: 20.0),
+            SizedBox(height: 30.0),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
